@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awesome Mini Site ⭐️</title>
+  <style>
+    /* RESET + BASE STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0077ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #0077ff;
+    }
+
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #e0f7ff, #ffffff);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #0077ff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #0077ff;
+      color: white;
+      border-radius: 4px;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #005fbb;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .feature {
+      background: #fff;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #eee;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .bar {
+      height: 3px;
+      width: 25px;
+      background: #0077ff;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">NEBAS SITE</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Welcome to NEBA'S SITE</h1>
+    <p>Your beautiful, responsive single-page website</p>
+    <a href="https://t.me/actualhate" class="btn">Explore Features</a>
+  </div>
+</section>
+
+<section id="f">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:40px;">Features</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Responsive Design</h3>
+        <p>Adapts to all screen sizes using modern CSS Grid & Flexbox.</p>
+      </div>
+      <div class="feature">
+        <h3>Smooth Navigation</h3>
+        <p>Sticky navbar and smooth scroll for a great user experience.</p>
+      </div>
+      <div class="feature">
+        <h3>OPIUM</h3>
+        <p>Pure HTML, CSS, and JavaScript. No external libraries needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:#f0f8ff;">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:40px;">About</h2>
+    <p style="max-width:700px; margin:auto;">MiniSite is a quick-start template designed for simplicity and elegance. It’s perfect for portfolios, small product pages, or demo projects. Feel free to expand and customize it to fit your brand or idea!</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:40px;">Contact</h2>
+    <form style="max-width:500px; margin:auto;">
+      <input type="text" placeholder="Your Name" style="width:100%; padding:12px; margin-bottom:15px;" required>
+      <input type="email" placeholder="Your Email" style="width:100%; padding:12px; margin-bottom:15px;" required>
+      <textarea placeholder="Your Message" style="width:100%; padding:12px; height:120px;" required></textarea>
+      <button class="btn" type="submit" style="width:100%; margin-top:15px;">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 MiniSite. Built with 💙 by 00neba 🔨🤖🔧</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+      document.getElementById('navLinks').classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>
